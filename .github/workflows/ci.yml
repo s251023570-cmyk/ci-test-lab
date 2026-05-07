@@ -1,12 +1,12 @@
 name: CI Pipeline
 
-[cite_start]on: [push] [cite: 439]
+on: [push]
 
 jobs:
   build:
-    [cite_start]runs-on: ubuntu-latest [cite: 442]
+    runs-on: ubuntu-latest
     steps:
-      - [cite_start]uses: actions/checkout@v3 [cite: 444]
+      - uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -19,4 +19,4 @@ jobs:
           pip install -r requirements.txt 
 
       - name: Run tests
-        [cite_start]run: pytest [cite: 273]
+        run: pytest
